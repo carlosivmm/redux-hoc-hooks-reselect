@@ -1,13 +1,19 @@
 import React from "react";
 import "./assets/main.css";
 
-import { default as ExampleReduxHoc } from "./redux_hoc/Counter";
+//REDUX HOC
+import CounterReduxHocExample from "./redux_hoc/CounterReduxHocExample";
+import DataHOCExample from "./redux_hoc/DataHOCExample";
+import CounterReduxHooksExample from "./redux_hooks/CounterReduxHooksExample";
+import DataHooksExample from "./redux_hooks/DataHooksExample";
 
 function App() {
-  console.log("render");
   return (
     <div className="flex p-16 flex-col">
-      <div className="font-black">REDUX HOC</div>
+      <CounterReduxHooksExample />
+      <DataHooksExample user="carlos" />
+      {/* <CounterReduxHocExample />
+      <DataHOCExample user="carlos" /> */}
     </div>
   );
 }

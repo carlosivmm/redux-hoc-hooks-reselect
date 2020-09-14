@@ -1,6 +1,6 @@
 import * as reduxModule from "redux";
 import { applyMiddleware, compose, createStore } from "redux";
-import createReducer from "./reducers";
+import createReducer from "./reducers/";
 import thunk from "redux-thunk";
 
 /*
