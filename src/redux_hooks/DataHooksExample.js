@@ -1,8 +1,8 @@
 import React from "react";
 
-import { useSelector } from "react-redux";
-
 import { createSelector } from "reselect";
+
+import { useSelector } from "react-redux";
 
 const getTodosSelector = createSelector(
   (state, props) => state.todos[props.user],
@@ -10,13 +10,13 @@ const getTodosSelector = createSelector(
   (todos, filter) => todos.filter(todo => todo.status === filter)
 );
 
-const DataHooksExample = React.memo(props => {
+const DataHooksExample = props => {
   const todos = useSelector(state =>
-    getTodosSelector(state.redux_hooks, props, "done")
+    getTodosSelector(state.redux_hoc, props, "done")
   );
 
   console.log("Render DataHooksExample");
   return <div>{JSON.stringify(todos)}</div>;
-});
+};
 
 export default DataHooksExample;

@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 
 import * as Actions from "./../store/actions";
 
-export class CounterReduxHocExample extends Component {
+class CounterReduxHocExample extends Component {
   componentDidMount() {
     setInterval(() => {
       this.props.increment(1);

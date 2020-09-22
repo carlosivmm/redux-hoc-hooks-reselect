@@ -21,7 +21,9 @@ const mapStateToProps = (state, props) => {
   // const todos = state.redux_hoc.todos[props.user].filter(
   //   todo => todo.status === "done"
   // );
+
   const todos = getTodosSelector(state.redux_hoc, props, "done");
+
   return { todos };
 };
 
